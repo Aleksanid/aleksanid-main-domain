@@ -1,0 +1,5 @@
+security:
+  secret: ${SECRET_TOKEN}
+  expirationTime: 60000000
+  tokenPrefix: Bearer_
+  headerString: Authorization
