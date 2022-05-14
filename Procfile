@@ -1,1 +1,1 @@
-web: java -jar target/main-domain-0.0.1-SNAPSHOT.pom
+web: java -jar target/main-domain-0.0.1-SNAPSHOT.war
