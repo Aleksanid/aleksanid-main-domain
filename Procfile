@@ -1,1 +1,1 @@
-web: java -jar target/main-domain-0.0.1-SNAPSHOT.war $JAVA_OPTS -Dserver.port=$PORT
+web: java -jar $JAVA_OPTS target/main-domain-0.0.1-SNAPSHOT.war
