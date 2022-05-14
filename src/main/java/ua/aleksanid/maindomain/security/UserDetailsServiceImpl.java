@@ -19,7 +19,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     public UserDetailsServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
-        userRepository.save(new AppUser(-1L, "omega", "$2a$10$2fw7rSP1bCLWXNmHKTsWjekJtVT4.ihvCUk78ohl0A4OgKmNM7.8."));
     }
 
     @Override

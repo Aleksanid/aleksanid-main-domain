@@ -3,7 +3,9 @@ package ua.aleksanid.maindomain.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -18,8 +20,14 @@ public class Product {
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "description", nullable = false)
+    @Column(name = "description", nullable = false, length = 512)
     private String description;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Parameter> parameters = new LinkedHashSet<>();
+
+    @Column(name = "is_available", nullable = false)
+    private Boolean isAvailable;
 
     @Override
     public boolean equals(Object o) {
