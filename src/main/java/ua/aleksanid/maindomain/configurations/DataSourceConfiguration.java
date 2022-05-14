@@ -1,11 +1,11 @@
 package ua.aleksanid.maindomain.configurations;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import ua.aleksanid.maindomain.util.YamlPropertySourceFactory;
 
 @Configuration
-@PropertySource("classpath:datasource.yml")
+@PropertySource(value = "classpath:datasource.yml", factory = YamlPropertySourceFactory.class)
 public class DataSourceConfiguration {
 
 }
